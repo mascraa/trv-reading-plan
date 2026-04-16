@@ -645,14 +645,17 @@
         justify-content: center;
       }
 
-      /* ── Force all inner-page text to solid black ── */
-      /* Excludes .cover (first page) and .back (last page) */
+      /* ── Force inner-page text to solid black for print legibility ── */
+      /* Excludes month-hdr (white text on black bar) */
       .inst *,
-      .month-block *,
-      .month-hdr,
-      .month-hdr .mta,
-      .month-hdr .men {
+      .month-block td,
+      .month-block td * {
         color: #000000 !important;
+      }
+      /* Keep month header text white */
+      .month-hdr,
+      .month-hdr * {
+        color: #ffffff !important;
       }
     }
   </style>
